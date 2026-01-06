@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JournHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #eef2f7;
+}
+
+.page {
+  
+
+  overflow: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: white;
+}
+
+.logo {
+  font-weight: bold;
+  color: #2563eb;
+  font-size: 18px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.btn-primary {
+  background: rgb(255, 255, 255);
+  color: #2563eb;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: #ffffff;
+  border: none;
+  color: #2563eb;
+  padding: 10px 18px;
+  border-radius: 16px;
+  cursor: pointer;
+  margin: 10px 10px 10px 10px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  background: linear-gradient(135deg, #ffffff, #b5c2d6, rgb(204, 216, 226));
+  
+}
+
+.hero-text {
+  width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  color: #555;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-image {
+  height: 100px;
+  width: px;
+  color: #2563eb;
+}
+
+/* FEATURES */
+.features {
+  text-align: center;
+  padding: 30px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.card i {
+  font-size: 30px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* TRUST */
+.trust {
+  display: flex;
+  padding: 30px 60px;
+  justify-content: space-between;
+}
+
+.trust-left {
+  width: 50%;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: minmax(500px, 1fr);
+}
+
+.trust-right span {
+  display: inline-block;
+  background: rgb(255, 255, 255);
+  padding: 8px 14px 20px 14px;
+  border-radius: 16px;
+  margin: 5px;
+}
+
+ .trust-right {
+        width: 100%;
+    }
+    .trust-right h4 {
+        margin-bottom: 15px;
+    }
+    
+
+    /* LOGOS GRID */
+    .logos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 0;
+    }
+
+    .logo1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      height: 140px; 
+      font-size: 0.65em;
+      color: var(--light-text);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border: 1px solid var(--border-color);
+    }
+    .logo1 i {
+        color: #4184db; 
+        margin-bottom: 5px;
+        font-size: 1.2em;
+        
+    }
+    .logo1 span {
+        margin-top: 5px;
+        font-size: 1.2em;
+    }
+    i{
+      font-size: 3em;
+    }
+
+/* PRICING */
+.pricing {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.price-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  width: 220px;
+  text-align: center;
+}
+
+.price-card.active {
+  border: 2px solid #2563eb;
+}
+
+.btn-card {
+  color: rgb(0, 100, 250);
+  border: 1px solid rgb(74, 114, 190);
+  padding: 10px 18px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.btn-card1{
+  color: white;
+  background-color: #2563eb;
+  border: 1px #2563eb;
+  border-radius: 16px;
+  padding: 10px 18px;
+}
+
+/* join */
+.join {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  padding: 25px;
+  text-align: center;
+  margin: 20px 60px;
+  border-radius: 16px;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 60px;
+  background: white;
+}
+
+.footer-left i{
+  background: rgba(0, 0, 0, 0.2);
+  color: #4577e4;
+  font-size: 25px;
+}
+.footer-links a{
+  text-decoration: none;
+  color: #2563eb;
+}
+.social i{
+   color: #2563eb;
+}
+
+/* Responsive adjustments */
+    @media (max-width: 992px) {
+        .hero, .trust {
+            flex-direction: column;
+        }
+        .hero-text, .trust-left, .trust-right {
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 20px;
+        }
+         .features-grid, .pricing {
+            grid-template-columns: repeat(2, 1fr);
+            display: grid;
+        }
+         .pricing-card {
+            width: unset;
+         }
+        .pricing .quote-icon-left, .pricing .quote-icon-right {
+            display: none;
+        }
+    }
+    @media (max-width: 600px) {
+        .feature-grid, .logos, .pricing {
+            grid-template-columns: 1fr;
+        }
+        .navbar {
+            flex-direction: column;
+            gap: 10px;
+        }
+        nav a {
+            margin: 5px;
+        }
+        .join, .page {
+            padding: 20px;
+            margin: 20px;
+        }
+        footer {
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+        }
+        .footer-links a, .social i {
+            margin: 0 10px;
+        }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-book-open"></i> JournHub
+    </div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <button class="btn-primary">Request Demo</button>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Empowering Institutions with Seamless Access to Research</h1>
+      <p>
+        Digitize, manage, and share scholarly journals efficiently across departments.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary">Start Free Trial</button>
+        <button class="btn-outline">Explore Features</button>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="./download.jpg" alt="02" style="width: 109.4%; height: 41vh; margin: -90px 100px 1px 10px; opacity: 0.4;" >
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <h2>Features Tailored for Academic Excellence</h2>
+
+    <div class="feature-grid">
+      <div class="card"><i class="fa-solid fa-cloud"></i><h4>Research Archive</h4></div>
+      <div class="card"><i class="fa-solid fa-file-lines"></i><h4>Institutional Publishing</h4></div>
+      <div class="card"><i class="fa-solid fa-handshake"></i><h4>Collaboration Tools</h4></div>
+      <div class="card"><i class="fa-solid fa-magnifying-glass"></i><h4>Search & Discover</h4></div>
+      <div class="card"><i class="fa-solid fa-chart-line"></i><h4>Analytics</h4></div>
+      <div class="card"><i class="fa-solid fa-book"></i><h4>Metrics & Reports</h4></div>
+    </div>
+  </section>
+
+  <!-- TRUST SECTION -->
+  <section class="trust">
+    <div class="trust-left">
+      <h3>Redefining Academic Access for the Digital Age</h3>
+      <p>
+        We believe academic excellence thrives on accessibility, innovation, and secure publishing.
+      </p>
+      <div class="trust-image">
+        <img src="./download (1).jpg" alt="" style="width: 90%; height: 50vh; margin: 10px 10px 10px 10px; opacity: 0.5;">
+      </div>
+    </div>
+
+    <div class="trust-right">
+      <h4>Trusted by Leading Institutions</h4>
+      <div class="logos">
+        <div class="logo1"><i class="fa-solid fa-building-columns" ><span>University X</span></i></div>
+        <div class="logo1"><span>Academy of Science</span></div>
+        <div class="logo1"><i class="fa-brands fa-google-scholar"><span>Global Scholars</span></i></div>
+        <div class="logo1"><i class="fa-brands fa-researchgate"><span>Research Lab</span></i></div>
+        <div class="logo1"><i class="fa-solid fa-computer"><span>Computer Lab</span></i></div>
+        <div class="logo1"><i class="fa-solid fa-dna"><span>Biology Lab</span></i></div>
+        <div class="logo1"><i class="fa-solid fa-globe"><span>Network port</span></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing">
+     <div class="price-card">
+      <h4>Enterprise</h4>
+      <p>for small endication relationship</p>
+      <button class="btn-card">Get Started</button>
+    </div>
+    <div class="price-card">
+      <h4>Basic</h4>
+      <h2>$99/month</h2>
+      <p>$50-lb discharge <br> $55-ob brought <br>holiday <br> Dr khalid, research director notification unversity</p>
+    </div>
+
+    <div class="price-card active">
+      <h4>Professional</h4>
+      <h2></h2>
+      <p>unlimited storage <br> advanced Analytics</p>
+      <button class="btn-card1">Sign Up Now</button>
+    </div>
+
+     <div class="price-card">
+      <h4>Enterprise</h4>
+      <h2>$299/month</h2>
+      <p>unimate science <br> advanced Analytics <br>colastoration Tools</p>
+      <button class="btn-card">Sign Up Now</button>
+    </div>
+
+     <div class="price-card">
+      <h4>Eustona</h4>
+      <h2>$299/month</h2>
+      <p>Custom <br> customs invepus <br> whire usabiling</p>
+      <button class="btn-card">Contact Us</button>
+    </div>
+  </section>
+
+  <!-- join -->
+  <section class="join">
+    <h2>Join hundreds of institutions transforming their research management today</h2>
+    <div>
+      <button class="btn-primary">Start Now</button>
+      <button class="btn-outline">Schedule Demo</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <i class="fa-solid fa-book-open"></i> JournHub
+    </div>
+
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="social">
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-twitter" id="twitter"></i>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
